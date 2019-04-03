@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public final class NetworkUtils {
 
-    public static final String apiKey = "e651012316c7720eab43087b7a10ee1a";
+    public static final String apiKey = "your api key";
     public static final String imagesBaseUrl = "http://image.tmdb.org/t/p/w185/";
     public static final String moviesBaseUrl = "http://api.themoviedb.org/3/movie/";
     public static final String topRated = "top_rated";

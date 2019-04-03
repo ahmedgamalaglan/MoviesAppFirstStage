@@ -31,13 +31,13 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    RecyclerView recyclerView;
-    GridLayoutManager gridLayoutManager;
-    MoviesAdapter moviesAdapter;
-    List<Movie> movies;
-    ProgressBar progressBar;
-    TextView connectionError;
-    String sortBy;
+    private RecyclerView recyclerView;
+    private GridLayoutManager gridLayoutManager;
+    private MoviesAdapter moviesAdapter;
+    private List<Movie> movies;
+    private ProgressBar progressBar;
+    private TextView connectionError;
+    private String sortBy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,17 +112,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public class LoadMoviesTask extends AsyncTask<String, Void, List<Movie>> {
+    class LoadMoviesTask extends AsyncTask<String, Void, List<Movie>> {
 
         @Override
-        protected List doInBackground(String... sort_by) {
+        protected List<Movie> doInBackground(String... sort_by) {
             URL url = NetworkUtils.urlBuilder(sort_by[0]);
             Log.e(TAG, "doInBackground: url get it " + url.toString());
 
 
             try {
                 String res = NetworkUtils.getResponseFromHttpUrl(url);
-                Log.d(TAG, "doInBackground: reponse is" + res);
+                Log.d(TAG, "doInBackground: response is" + res);
                 List<Movie> movies = JSonParser.getMoviesFromJson(res);
                 Log.d(TAG, "doInBackground: movies size is " + movies.size());
                 return movies;

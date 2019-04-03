@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder> {
 
-    List<Movie> movies;
+    private List<Movie> movies;
     Context context;
 
     public MoviesAdapter(List<Movie> movies, Context c) {
@@ -51,7 +51,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     public class MoviesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
 
-        public MoviesViewHolder(@NonNull View itemView) {
+        MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.iv_movie_item);
         }
@@ -63,7 +63,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         @Override
         public void onClick(View v) {
             Toast.makeText(context,"item "+getAdapterPosition()+" was clicked",Toast.LENGTH_SHORT).show();
-            Log.d("asdf", "onClick: "+getAdapterPosition());
         }
     }
 
