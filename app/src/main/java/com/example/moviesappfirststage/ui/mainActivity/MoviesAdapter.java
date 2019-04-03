@@ -3,7 +3,6 @@ package com.example.moviesappfirststage.ui.mainActivity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +53,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.iv_movie_item);
+            imageView.setOnClickListener(this);
         }
 
         void bind(int index) {
@@ -62,11 +62,11 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(context,"item "+getAdapterPosition()+" was clicked",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "item " + movies.get(getAdapterPosition()).getOverview() + " was clicked", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public interface Clickable{
+    public interface Clickable {
         void onItemClicked();
     }
 
