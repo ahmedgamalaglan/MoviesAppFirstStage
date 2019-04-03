@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movies App First Stage</string>
+    <string name="no_internet">No internet connection \n try again</string>
+    <string name="sort_by">Sort By</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+</resources>
