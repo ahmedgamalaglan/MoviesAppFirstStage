@@ -8,9 +8,10 @@
     tools:context=".ui.detailsActivity.DetailsActivity">
 
     <ImageView
+        android:padding="1dp"
         android:id="@+id/iv_movie_image"
-        android:layout_width="176dp"
-        android:layout_height="247dp"
+        android:layout_width="206dp"
+        android:layout_height="295dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -30,7 +31,7 @@
         android:layout_marginRight="8dp"
         android:text="@string/movie_title"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="22sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_movie_image"
@@ -47,7 +48,7 @@
         android:layout_marginRight="8dp"
         android:text="@string/release_date"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_movie_image"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
@@ -63,8 +64,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:clickable="false"
-        android:numStars="5"
+        android:numStars="10"
         android:stepSize=".1"
+        android:rating="7.6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_movie_image"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_release_date" />
@@ -81,9 +83,25 @@
         android:layout_marginBottom="16dp"
         android:text="@string/movie_review"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_movie_image" />
+
+    <TextView
+        android:id="@+id/tv_movie_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_movie_image"
+        app:layout_constraintTop_toBottomOf="@+id/rb_movie_ratingBar" />
 </android.support.constraint.ConstraintLayout>

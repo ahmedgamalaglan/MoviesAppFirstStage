@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.detailsActivity.DetailsActivity"></activity>
+        <activity android:name=".ui.detailsActivity.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moviesappfirststage.ui.mainActivity.MainActivity" />
+        </activity>
         <activity android:name=".ui.mainActivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

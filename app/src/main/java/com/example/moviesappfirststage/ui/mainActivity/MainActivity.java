@@ -88,14 +88,7 @@ public class MainActivity extends AppCompatActivity {
     public class InternetCheck extends AsyncTask<Void, Void, Boolean> {
         @Override
         protected Boolean doInBackground(Void... voids) {
-            try {
-                Socket sock = new Socket();
-                sock.connect(new InetSocketAddress("8.8.8.8", 53), 1500);
-                sock.close();
-                return true;
-            } catch (IOException e) {
-                return false;
-            }
+            return NetworkUtils.checkNetworkAccess();
         }
 
         @Override
@@ -111,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
     class LoadMoviesTask extends AsyncTask<String, Void, List<Movie>> {
 

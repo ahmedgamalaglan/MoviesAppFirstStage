@@ -5,7 +5,9 @@ import android.net.Uri;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Socket;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -49,6 +51,17 @@ public final class NetworkUtils {
             }
         } finally {
             urlConnection.disconnect();
+        }
+    }
+
+    public static boolean checkNetworkAccess() {
+        try {
+            Socket sock = new Socket();
+            sock.connect(new InetSocketAddress("8.8.8.8", 53), 3000);
+            sock.close();
+            return true;
+        } catch (IOException e) {
+            return false;
         }
     }
 
