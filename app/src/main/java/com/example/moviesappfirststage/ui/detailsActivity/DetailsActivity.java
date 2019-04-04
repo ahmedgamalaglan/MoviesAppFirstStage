@@ -11,6 +11,8 @@ import com.example.moviesappfirststage.models.Movie;
 import com.example.moviesappfirststage.utils.NetworkUtils;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class DetailsActivity extends AppCompatActivity {
 
 
@@ -29,7 +31,7 @@ public class DetailsActivity extends AppCompatActivity {
         movie = (Movie) getIntent().getSerializableExtra("movie");
         initComponents();
         setComponentsValues();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(movie.getTitle());
     }
 
