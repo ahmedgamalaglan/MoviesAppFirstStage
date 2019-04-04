@@ -64,15 +64,11 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
 
         @Override
         public void onClick(View v) {
-            Movie sentMovie=movies.get(getAdapterPosition());
-            Intent intent=new Intent(context, DetailsActivity.class);
-            intent.putExtra("movie",sentMovie);
+            Movie sentMovie = movies.get(getAdapterPosition());
+            Intent intent = new Intent(context, DetailsActivity.class);
+            intent.putExtra("movie", sentMovie);
             context.startActivity(intent);
         }
-    }
-
-    public interface Clickable {
-        void onItemClicked();
     }
 
 }
