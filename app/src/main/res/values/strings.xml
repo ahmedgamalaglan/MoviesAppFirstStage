@@ -4,4 +4,7 @@
     <string name="sort_by">Sort By</string>
     <string name="popular">Popular</string>
     <string name="top_rated">Top Rated</string>
+    <string name="release_date">Release Date</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_review">Movie Review</string>
 </resources>

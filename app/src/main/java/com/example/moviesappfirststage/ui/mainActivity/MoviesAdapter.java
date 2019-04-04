@@ -1,6 +1,7 @@
 package com.example.moviesappfirststage.ui.mainActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.moviesappfirststage.R;
 import com.example.moviesappfirststage.models.Movie;
+import com.example.moviesappfirststage.ui.detailsActivity.DetailsActivity;
 import com.example.moviesappfirststage.utils.NetworkUtils;
 import com.squareup.picasso.Picasso;
 
@@ -62,7 +64,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(context, "item " + movies.get(getAdapterPosition()).getOverview() + " was clicked", Toast.LENGTH_SHORT).show();
+            Movie sentMovie=movies.get(getAdapterPosition());
+            Intent intent=new Intent(context, DetailsActivity.class);
+            intent.putExtra("movie",sentMovie);
+            context.startActivity(intent);
         }
     }
 

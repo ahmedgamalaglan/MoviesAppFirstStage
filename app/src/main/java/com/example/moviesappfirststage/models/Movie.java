@@ -1,6 +1,9 @@
 package com.example.moviesappfirststage.models;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
+
 
 
     private String overview;
@@ -58,4 +61,6 @@ public class Movie {
     public void setRelease_date(String release_date) {
         this.release_date = release_date;
     }
+
+
 }

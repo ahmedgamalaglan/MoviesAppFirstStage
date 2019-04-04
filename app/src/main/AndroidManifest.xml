@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.mainActivity.detailsActivity.DetailsActivity"></activity>
-        <activity android:name=".ui.mainActivity.mainActivity.MainActivity">
+        <activity android:name=".ui.detailsActivity.DetailsActivity"></activity>
+        <activity android:name=".ui.mainActivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
