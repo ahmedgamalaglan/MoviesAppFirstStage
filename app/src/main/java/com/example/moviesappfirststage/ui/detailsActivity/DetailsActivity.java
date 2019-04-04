@@ -46,7 +46,7 @@ public class DetailsActivity extends AppCompatActivity {
     private void setComponentsValues() {
         Picasso.with(this).load(NetworkUtils.imagesBaseUrl + movie.getPoster_path()).into(movieImage);
         movieTitle.setText(movie.getTitle());
-        releaseDate.setText("Released at : " + movie.getRelease_date() );
+        releaseDate.setText("Released at : " + movie.getRelease_date());
         movieReview.setText(movie.getOverview());
         movieRatingBar.setRating((float) movie.getVote_average());
         movieRating.setText(movie.getVote_average() + " / 10");
